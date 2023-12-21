@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -27,7 +28,17 @@ namespace dotnetfive
         public void ConfigureServices(IServiceCollection services)
         {
 
-            services.AddControllers();
+            //services.AddControllers();
+            // update the controllers to use OData
+            // add and configure OData as a service
+            services.AddControllers().AddOData(options => 
+                // Select allows you to run a query and only select specific properties
+                options.Select()
+                // Filter allows you to run a query and return only results that follow a specific condition
+                .Filter()
+                // OrderBy allows you to run a query that is ordered according to a specific property
+                .OrderBy()
+                );
             // Add this here to set up dependency injection/implement the interface
             services.AddTransient<IStudentService,  StudentService>();
             services.AddSwaggerGen(c =>

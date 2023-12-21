@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.OData.Query;
 using Odata6Demo.Api.Models;
 using Odata6Demo.Api.Services;
 
@@ -19,6 +20,8 @@ namespace Odata6Demo.Api.Controllers
         }
 
         [HttpGet]
+        // add the EnableQuery attribute to allow OData functionality
+        [EnableQuery]
         public ActionResult<IQueryable<Student>> GetAllStudents()
         {
             IQueryable<Student> retrievedStudents = this.studentService.RetrieveAllStudents();
