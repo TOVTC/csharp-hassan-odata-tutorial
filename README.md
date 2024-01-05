@@ -277,6 +277,6 @@ To switch to descending order, add the `desc` parameter `/api/Students?$orderby=
 There are many more capabilities available through the OData documentation, such as pagination or the .Expand() option which is for nested entities.
 
 ### Helpful Documentation
-[https://devblogs.microsoft.com/odata/supercharging-asp-net-core-api-with-odata/](https://devblogs.microsoft.com/odata/supercharging-asp-net-core-api-with-odata/)
-[https://devblogs.microsoft.com/odata/simplifying-edm-with-odata/](https://devblogs.microsoft.com/odata/simplifying-edm-with-odata/)
+[https://devblogs.microsoft.com/odata/supercharging-asp-net-core-api-with-odata/](https://devblogs.microsoft.com/odata/supercharging-asp-net-core-api-with-odata/)</br>
+[https://devblogs.microsoft.com/odata/simplifying-edm-with-odata/](https://devblogs.microsoft.com/odata/simplifying-edm-with-odata/)</br>
 [https://devblogs.microsoft.com/odata/enabling-endpoint-routing-in-odata/](https://devblogs.microsoft.com/odata/enabling-endpoint-routing-in-odata/)
